@@ -8,14 +8,8 @@ const app = express()
 require('dotenv').config()
 app.use(express.json())
 app.use(express.urlencoded({ extended: false }))
-const sequelize = new Sequelize(process.env.PG_URI)
 
-try {
-    sequelize.authenticate()
-    console.log(`SQL Database connected at ${process.env.PG_URI}! :D`)
-} catch (error) {
-    console.log(`unable to connect to ${process.env.PG_URI}... :(`)
-}
+
 
 // ROOT
 app.get('/', (req, res) => {
@@ -23,6 +17,7 @@ app.get('/', (req, res) => {
         message: 'Welcome to the Tour API'
     })
 })
+
 
 // LISTEN - telling our app which port to listen to
 app.listen(process.env.PORT, () => {
