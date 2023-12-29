@@ -1,6 +1,6 @@
 # Music-Tour-API: SQL Lab
 
-PROMPT:
+PROMPT: Create an API where different Concert Tours from different artists are displayed
 
 SKILLS: pgAdmin, SQL, Sequelize, Sequelize CLI, JS, Postman
 
@@ -22,15 +22,15 @@ OUTPUT:
 - to start the server, open the terminal in IDE terminal and type nodemon server.js
 
 ROUTES:
-    http://localhost:3000/ - a welcome message into the music API
+http://localhost:3000/ - a welcome message into the music API
 
-    http://localhost:3000/bands - all of the data from the "bands" table. Base URL for the bands_controller and Band model
-    http://localhost:3000/bands:id - used to select, update, delete, and create a specific band with an ID
-    http://localhost:3000/bands?name=bandname - used to find a band with a spesific band name
+http://localhost:3000/bands - all of the data from the "bands" table. Base URL for the bands_controller and Band model
+http://localhost:3000/bands:id - used to select, update, delete, and create a specific band with an ID
+http://localhost:3000/bands?name=bandname - used to find a band with a spesific band name
 
-    http://localhost:3000/stages - all of the data from the "stages" table. Base URL for the stages-controller and the Stage model
-    http://localhost:3000/stages:id - used to select, update, delete, and create a specific band with an ID
+http://localhost:3000/stages - all of the data from the "stages" table. Base URL for the stages-controller and the Stage model
+http://localhost:3000/stages:id - used to select, update, delete, and create a specific band with an ID
 
-    http://localhost:3000/events - all of the data from the "events" table. Base URL for the events-controller and the Event model
-    http://localhost:3000/events:id - used to select, update, delete, and create a specific band with an ID
+http://localhost:3000/events - all of the data from the "events" table. Base URL for the events-controller and the Event model
+http://localhost:3000/events:id - used to select, update, delete, and create a specific band with an ID
 
