@@ -9,7 +9,7 @@ PROCESS:
 - I connected the backend database with a localhost server by using Sequelize and Sequelize CLI.
 - Sequelize was used to create a URI link between the SQL database & the server and access the SQL database easily
 - Sequelize CLI was used to generate the models and the migration files
-- I wrote controllers for the Band, Event, and Stage models
+- I wrote controllers for the Band, Event, and Stage models. I followed an acticity guide to write the Band controller, but I wrote the Event and Stage controller by myself
 -
 -
 -
@@ -26,5 +26,5 @@ ROUTES:
 
     http://localhost:3000/bands - all of the data from the "bands" table. Base URL for the bands_controller and Band model
     http://localhost:3000/bands:id - used to select, update, delete, and create a specific band with an ID
+    http://localhost:3000/bands?name=bandname - used to find a band with a spesific band name
 
-    
