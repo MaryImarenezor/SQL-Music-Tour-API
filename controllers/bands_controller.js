@@ -20,7 +20,7 @@ bands.get('/', async (req, res) => {
     }
 })
 
-// FIND A SPECIFIC BAND - The Show Route
+// FIND A SPECIFIC BAND USING AN ID - The Show Route
 bands.get('/:id', async (req, res) => {
     try {
         const foundBand = await Band.findOne({
@@ -60,7 +60,7 @@ bands.put('/:id', async (req, res) => {
     }
 })
 
-//REMOVING A BAND - The Delete Route
+//REMOVING A BAND USING AN ID - The Delete Route
 bands.delete('/:id', async (req, res) => {
     try {
         const deletedBands = await Band.destroy({
