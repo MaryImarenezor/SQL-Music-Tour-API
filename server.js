@@ -18,6 +18,9 @@ app.get('/', (req, res) => {
     })
 })
 
+// CONTROLLERS
+const bandsController = require('./controllers/bands_controller')
+app.use('/bands', bandsController)
 
 // LISTEN - telling our app which port to listen to
 app.listen(process.env.PORT, () => {
