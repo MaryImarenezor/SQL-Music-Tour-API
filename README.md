@@ -21,7 +21,7 @@ BUGS:
 - when I tried writing associations between the Set_Time models, the server kept on crashing, so to avoid issues and find the bug in a later time I commented the issue out. That way the server can still be functional
 
 ROUTES:
-http://localhost:3000/ - a welcome message into the music API
+http://localhost:3000/ - the homepage into the music API
 
 http://localhost:3000/bands - all of the data from the "bands" table. Base URL for the bands_controller and Band model
 http://localhost:3000/bands:id - used to select, update, delete, and create a specific band with an ID
