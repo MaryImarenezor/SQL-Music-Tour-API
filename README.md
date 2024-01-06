@@ -10,16 +10,15 @@ PROCESS:
 - Sequelize was used to connect between the SQL database & the server and access the SQL database easily
 - Sequelize CLI was used to generate the models and the migration files
 - I wrote controllers for the Band, Event, and Stage models. I followed an acticity guide provided to write the Band controller, but I wrote the Event and Stage controller by myself
--
--
--
--
--
--
+- I added in additional associations between the models
+
 
 OUTPUT:
 - when going into the localhost server on Postman/Browser, it should display the data of the databases
 - to start the server, open the terminal in IDE terminal and type nodemon server.js
+
+BUGS:
+- when I tried writing associations between the Set_Time models, the server kept on crashing, so to avoid issues and find the bug in a later time I commented the issue out. That way the server can still be functional
 
 ROUTES:
 http://localhost:3000/ - a welcome message into the music API

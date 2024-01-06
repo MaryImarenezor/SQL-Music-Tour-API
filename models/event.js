@@ -11,14 +11,14 @@ module.exports = (sequelize, DataTypes) => {
         as: 'stages',
         through: Stage_Event
       })
-      Event.belongsToMany(Meet_Greet, {
+      /*Event.belongsToMany(Meet_Greet, {
         foreignKey: 'event_id_fk',
         as: 'meet_greets'
-      }) 
-      Event.belongsToMany(Set_Time, {
+      }) */
+      /*Event.belongsToMany(Set_Time, {
         foreignKey: 'event_id_pk',
         as: 'set_times'
-      })    
+      })*/    
     }
   }
   Event.init({
