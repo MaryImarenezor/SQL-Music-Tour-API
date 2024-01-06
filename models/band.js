@@ -3,13 +3,21 @@ const { Model } = require('sequelize');
 
 module.exports = (sequelize, DataTypes) => {
 class Band extends Model {
-    /**
-     * Helper method for defining associations.
-     * This method is not a part of Sequelize lifecycle.
-     * The `models/index` file will call this method automatically.
-     */
-    static associate(models) {
-      // define association here
+//ASSOCIATION DEFINING GOES HERE - One-to-Many relationship where Band is the Parent and MeetGreet is the child
+//One-to-many relationship where Band is the parent and SetTimes is the child
+    static associate({ Meet_Greet, Set_Time }) {
+        Band.hasMany(Meet_Greet, {
+            /*
+            used to specify which fk it's referring to along with renaming that fk.
+            renamed to "meet_greets" so I could include the related MeetGreets when returned.
+            */
+            foreignKey: 'band_id',
+            as: 'meet_greets'
+        })
+        Band.hasMany(Set_Time, {
+            foreignKey: 'band_id',
+            as: 'set_times'
+        })        
     }
 }
 Band.init({

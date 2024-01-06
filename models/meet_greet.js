@@ -2,13 +2,22 @@
 const { Model } = require('sequelize');
 module.exports = (sequelize, DataTypes) => {
   class Meet_Greet extends Model {
-    /**
-     * Helper method for defining associations.
-     * This method is not a part of Sequelize lifecycle.
-     * The `models/index` file will call this method automatically.
-     */
-    static associate(models) {
-      // define association here
+//ASSOCIATION DEFINING GOES HERE - One-to-Many relationship where Band is the Parent and MeetGreet is the child
+//One-to-many relationship where Event is the parent and MeetGreets is the child
+
+    static associate({ Band, Event }) {
+      Meet_Greet.belongsTo(Band, {
+        /*
+        used to specify which fk it's referring to along with renaming that fk.
+        renamed to "band" so I could include the related Bands when returned.
+        */
+        foreignKey: 'band_id',
+        as: 'band'
+      })
+      Meet_Greet.belongsTo(Event, {
+        foreignKey: 'event_id',
+        as: 'event'
+      })      
     }
   }
   Meet_Greet.init({

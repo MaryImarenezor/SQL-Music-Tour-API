@@ -58,11 +58,11 @@ stages.delete('/:id', async (req, res) => {
         const removedStage = await Stage.destroy({
             where: {stage_id: req.params.id}
         })
-        res.status(500).json({
+        res.status(200).json({
             message: `${removedStage} stage(s) removed successfully... ;(`
         })
     } catch (error) {
-        res.status(200).json(error)
+        res.status(500).json(error)
     }
 })
 
